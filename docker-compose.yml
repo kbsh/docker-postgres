@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    image: postgres:12
+    container_name: db-container
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      TZ: Asia/Tokyo
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-test}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --locale=C"
+    volumes:
+      - ./initdb/:/docker-entrypoint-initdb.d/
