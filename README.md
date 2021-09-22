@@ -1,11 +1,11 @@
 ## 概要
 
-MySQL をローカルにダウンロードせずに、docker で MySQL 立ち上げる。
+PostgreSQL をローカルにダウンロードせずに、docker で立ち上げる。  
 `initdb/`配下に配置した SQL を読み込み初期データを投入できる。
 
 ## 前提
 
-- [Docker Desktop](https://docs.docker.com/docker-for-mac/install/) などを利用していること
+- [Docker Desktop](https://docs.docker.com/desktop/) を利用していること
 
 ## 環境に合わせた変更
 
@@ -14,7 +14,7 @@ MySQL をローカルにダウンロードせずに、docker で MySQL 立ち上
 - 接続情報
   - `.env`に環境変数を配置する
 - 初期投入データ
-  - `./initdb`配下に sql,zip などファイルを配置する
+  - `./initdb`配下に sql,zip などファイルを配置する(アルファベット順で実行されます)
 
 .env サンプル
 
